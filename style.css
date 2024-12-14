@@ -1,0 +1,220 @@
+/* @keyframes bob{0%{top:0;}50%{top:0.2em;} 100%{top: 0em}} */
+
+body {
+    background-color: black;
+    padding: 0em 2em;
+    margin: 0;
+}
+/* Face Code */
+#face {
+    height: 50vh;
+    max-width: 500px;
+    max-height: 450px;
+    margin: 0 auto;
+    padding: 5em 0;
+    background: url('assets/05_head/base.png') no-repeat;
+    background-size: 100% 100%;
+    border-radius: 5% 5% 50% 50%;
+    display: grid;
+}
+
+#face section {
+    margin-bottom: 2%;
+}
+.eyes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 10%;
+}
+
+.eyes section {
+    width: 70%;
+    height: 10vh;
+    justify-self: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 10px black;
+}
+
+#nose {
+    width: 30%;
+    margin: 0 auto;
+}
+
+#mouth {
+   width: 50%;
+   height: 50%;
+   margin: 0 auto;
+   margin-top: 50px;
+}
+
+/* Typing Code */
+h1, h2, h3, h4 {
+    color: white;
+    font-family: monospace;
+    font-size: 1.5em;
+}
+
+.overlaid h2 {
+    opacity: 0;
+    position: absolute;
+    padding-left: 20px;
+}
+
+.cursor-faded {
+    cursor: not-allowed;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.opa-zero {
+    opacity: 0 !important;
+}
+
+#text-box {
+    padding: 0px 20px;
+    margin-bottom: 10px;
+    padding: 1em;
+    z-index: 100;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#enter {
+    border: solid 1px white;
+    text-align: center;
+    font-family: monospace;
+    display: inline-block;
+    padding: 1em 2em;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    user-select: none;
+    color: white;
+    position: relative;
+    background-color: grey;
+    animation: bob 1s infinite alternate;
+    cursor: pointer;
+    z-index: 100;
+    margin: 0 auto;
+    display: table;
+}
+
+h1.display {
+    opacity: 1;
+}
+
+.no-click {
+    pointer-events: none;
+}
+
+.a-dialogue {
+    border: 2px solid lightskyblue;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: black;
+    width: 75%;
+    z-index: 100;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.a-dialogue h4 {
+    padding: .25rem;
+    color: lightskyblue;
+}
+
+h4:hover {
+    background-color: lightskyblue;
+    color: black;
+    cursor: pointer
+}
+
+h2 { 
+    color: lightgrey;
+}
+
+.aDia h1 {
+    color: lightskyblue;
+    text-align: left;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.aDia #enter {
+    background: lightskyblue;
+    color: black;
+    position: fixed;
+    bottom: 125px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#credits p, #credits p a {
+    color: white;
+    font-size: 1.5em;
+    font-family: monospace;
+    text-align: center;
+}
+
+#credits p:first-of-type {
+    font-size: 3em;
+}
+
+#credits .img-log {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.img-log img {
+    height: inherit;
+    width: 100%;
+    max-width: 400px;
+    justify-self: center;
+}
+
+@media screen and (max-width: 676px) {
+     #text-box {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 1em;
+    }
+  }
+
+@media screen and (max-width: 450px) {
+    h1, h2, h3, h4 {
+        font-size: 1.25em;
+    }
+    #face {
+        height: 40vh;
+        padding: 2em 1em;
+        margin-bottom: 1em;
+    }
+    #mouth {
+        margin-top: 20px
+    }
+
+    .a-dialogue { 
+        bottom: 0;
+    }
+
+    #enter {
+        padding: .5em 1em; 
+    }
+
+
+}
+  
+
